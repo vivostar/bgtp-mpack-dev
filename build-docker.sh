@@ -20,6 +20,7 @@ docker exec ambari-server bash -c "mysql -e \"DROP USER ''@'localhost'\""
 docker exec ambari-server bash -c "mysql -e \"DROP USER ''@'ambari-server'\""
 docker exec ambari-server bash -c "mysql -e \"DROP DATABASE test\""
 docker exec ambari-server bash -c "mysql -e \"CREATE DATABASE ambari\""
+docker exec ambari-server bash -c "mysql -e \"CREATE DATABASE hive\""
 docker exec ambari-server bash -c "mysql --database=ambari -e  \"source /var/lib/ambari-server/resources/Ambari-DDL-MySQL-CREATE.sql\""
 docker exec ambari-server bash -c "mysql -e \"FLUSH PRIVILEGES\""
 
